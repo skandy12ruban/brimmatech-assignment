@@ -1,0 +1,82 @@
+[
+    {
+        "id": 1,
+        "name": "John Doe",
+        "email": "john.doe@example.com",
+        "phone": "123-456-7890",
+        "address": "123 Main St",
+        "department": "HR",
+        "position": "Manager",
+        "salary": 50000
+    },
+    {
+        "id": 2,
+        "name": "Jane Doe",
+        "email": "jane.doe@example.com",
+        "phone": "123-456-7890",
+        "address": "123 Main St",
+        "department": "Finance",
+        "position": "Assistant Manager",
+        "salary": 55000
+    },
+    {
+        "id": 3,
+        "name": "John Smith",
+        "email": "john.smith@example.com",
+        "phone": "123-456-7890",
+        "address": "123 Main St",
+        "department": "Marketing",
+        "position": "Marketing Specialist",
+        "salary": 48000
+    },
+    {
+        "id": 4,
+        "name": "Jane Smith",
+        "email": "jane.smith@example.com",
+        "phone": "123-456-7890",
+        "address": "123 Main St",
+        "department": "IT",
+        "position": "Software Engineer",
+        "salary": 60000
+    },
+    {
+        "id": 5,
+        "name": "James Johnson",
+        "email": "james.johnson@example.com",
+        "phone": "123-456-7890",
+        "address": "123 Main St",
+        "department": "Operations",
+        "position": "Operations Manager",
+        "salary": 52000
+    },
+    {
+        "id": 6,
+        "name": "Emily Wilson",
+        "email": "emily.wilson@example.com",
+        "phone": "123-456-7890",
+        "address": "123 Main St",
+        "department": "HR",
+        "position": "HR Specialist",
+        "salary": 47000
+    },
+    {
+        "id": 7,
+        "name": "Michael Brown",
+        "email": "michael.brown@example.com",
+        "phone": "123-456-7890",
+        "address": "123 Main St",
+        "department": "Finance",
+        "position": "Financial Analyst",
+        "salary": 54000
+    },
+    {
+        "id": 8,
+        "name": "Emma Davis",
+        "email": "emma.davis@example.com",
+        "phone": "123-456-7890",
+        "address": "123 Main St",
+        "department": "Marketing",
+        "position": "Marketing Coordinator",
+        "salary": 46000
+    }
+]

@@ -1,0 +1,33 @@
+.container {
+  // width: 100%;
+  // margin: auto;
+  padding: 1rem;
+}
+
+.table-container {
+  margin-top: 2rem;
+  // width: 80dvw;
+  // margin: auto;
+}
+
+:host ::ng-deep .p-rowgroup-footer td {
+  font-weight: 700;
+}
+
+:host ::ng-deep .p-rowgroup-header {
+  span {
+    font-weight: 700;
+  }
+
+  .p-row-toggler {
+    vertical-align: middle;
+    margin-right: 0.25rem;
+  }
+}
+
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}

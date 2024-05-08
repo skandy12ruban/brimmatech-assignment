@@ -1,0 +1,67 @@
+<div class="container">
+    <p-card [header]="'Admin'">
+        Welcome to Admin Page
+    </p-card>
+  <div class="table-container" *ngIf="!isDataLoading; else loader">
+    <p-table [value]="dataSource" rowGroupMode="subheader" groupRowsBy="department">
+        <ng-template pTemplate="header">
+            <tr>
+                <th style="width:20%">Name</th>
+                <th style="width:20%">Department</th>
+                <th style="width:20%">Position</th>
+                <th style="width:20%">Actions</th>
+                
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="groupheader" let-user let-rowIndex="rowIndex" let-expanded="expanded">
+            <tr>
+                <td colspan="3">
+                    <button type="button" pButton pRipple [pRowToggler]="user" class="p-button-text p-button-rounded p-button-plain mr-2" [icon]="expanded ? 'pi pi-chevron-down' : 'pi pi-chevron-right'"
+                    [id]="user.department + '-row-toggler'"
+                    ></button>
+                    <span class="font-bold ml-3"
+                    style="vertical-align: super;"
+                    >{{user.department}}</span>
+                </td>
+                <td>
+                    <button pButton type="button" class="p-button-rounded p-button-success mr-2"
+                    (click)="addUser(user.department)"
+                    >
+                        Add
+                    </button>
+                </td>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="rowexpansion" let-user let-rowIndex="rowIndex">
+            <tr>
+                <td>
+                    {{user.name}}
+                </td>
+                <td>
+                    {{user.department}}
+                </td>
+                <td>
+                    {{user.position}}
+                </td>
+                <td>
+                    <button pButton type="button" icon="pi pi-pencil" class="p-button-text p-button-rounded p-button-success mr-2"
+                    (click)="updateUser(user, rowIndex)"
+                    ></button>
+                    <button pButton type="button" icon="pi pi-trash" class="p-button-text p-button-rounded p-button-danger mr-2"
+                    (click)="deleteUser(user, rowIndex)"
+                    >
+
+                    </button>
+                </td>
+            </tr>
+        </ng-template>
+    </p-table>
+  </div>
+  <p-confirmDialog [style]="{width: '50vw'}" [baseZIndex]="10000" rejectButtonStyleClass="p-button-text"></p-confirmDialog>
+</div>
+
+<ng-template #loader>
+    <div class="loader-container">
+        <p-progressSpinner></p-progressSpinner>
+    </div>
+</ng-template>

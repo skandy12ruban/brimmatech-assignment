@@ -1,0 +1,86 @@
+<div class="container">
+  <div class="formgrid grid" [formGroup]="userForm">
+    <div class="field col-12 md:col-6">
+      <label for="name">Firstname</label>
+      <input
+        id="name"
+        type="text"
+        class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full"
+        ngClass="{'border-danger': form.get('name').invalid && form.get('name').touched}"
+        formControlName="name"
+      />
+    </div>
+    <div class="field col-12 md:col-6">
+      <label for="email">Email</label>
+      <input
+        id="email"
+        type="email"
+        class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full"
+        ngClass="{'border-danger': form.get('email').invalid && form.get('email').touched}"
+        formControlName="email"
+      />
+    </div>
+    <div class="field col-12">
+      <label for="address">Address</label>
+      <textarea
+        id="address"
+        type="text"
+        rows="4"
+        formControlName="address"
+        class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full"
+        ngClass="{'border-danger': form.get('address').invalid && form.get('address').touched}"
+        
+      ></textarea>
+    </div>
+    <div class="field col-12 md:col-6">
+      <label for="phone">Phone</label>
+      <input
+        id="phone"
+        type="tel"
+        class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full"
+        formControlName="phone"
+        ngClass="{'border-danger': form.get('phone').invalid && form.get('phone').touched}"
+      />
+    </div>
+    <div class="field col-12 md:col-6">
+      <label for="department">Department</label>
+      <input
+        id="department"
+        type="text"
+        class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full"
+        formControlName="department"
+        ngClass="{'border-danger': form.get('department').invalid && form.get('department').touched}"
+      />
+    </div>
+    <div class="field col-12 md:col-6">
+      <label for="position">Designation</label>
+      <input
+        id="position"
+        type="text"
+        class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full"
+        formControlName="position"
+        ngClass="{'border-danger': form.get('position').invalid && form.get('position').touched}"
+      />
+    </div>
+    <div class="field col-12 md:col-6">
+      <label for="salary">Salary</label>
+      <input
+        id="salary"
+        type="number"
+        class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full"
+        formControlName="salary"
+        ngClass="{'border-danger': form.get('salary').invalid && form.get('salary').touched}"
+      />
+    </div>
+    <div class="field col-12 text-right">
+      <p-button label="Reset" [outlined]="true" severity="danger" class="m-3"
+      (click)="reset()"
+      ></p-button>
+      <p-button
+        [label]="user ? 'Update user' : 'Add user'"
+        severity="success"
+        (click)="addUser()"
+      ></p-button>
+    </div>
+  </div>
+</div>
